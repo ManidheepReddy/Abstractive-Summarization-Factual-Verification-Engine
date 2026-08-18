@@ -1,0 +1,22 @@
+# --- API / orchestration ---
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+
+# --- Modeling ---
+torch>=2.2
+transformers>=4.40
+datasets>=2.19          # for fine-tuning (trainer.py)
+accelerate>=0.30        # Trainer device/multi-GPU handling
+sentencepiece>=0.2.0     # required by T5 tokenizer
+
+# --- Evaluation (optional, gracefully degrade if absent) ---
+bert-score>=0.3.13
+rouge-score>=0.1.2       # reference implementation, if preferred over lexical_metrics.py
+sacrebleu>=2.4.0
+
+# --- Utilities ---
+numpy>=1.26
+tenacity>=8.3
